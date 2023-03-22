@@ -8,13 +8,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-        <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
+        <Link to="https://crew-jhsb.onrender.com/" style={{ color: "inherit", textDecoration: "none" }}>
           <span className="logo">happybooking</span>
         </Link>
         {user ? user.username : (
           <div className="navItems">
             <button className="navButton">Register</button>
-            <Link to="/login"  style={{ color: "inherit", textDecoration: "none" }}>
+            <Link to="https://crew-jhsb.onrender.com/login"  style={{ color: "inherit", textDecoration: "none" }}>
             <button className="navButton">Login</button>
             </Link>
           </div>
