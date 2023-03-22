@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading, error } = useFetch(`https://crew-jhsb.onrender.com/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
   console.log(data);
@@ -57,14 +57,14 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`https://crew-jhsb.onrender.com/rooms/availability/${roomId}`, {
+          const res = axios.put(`/rooms/availability/${roomId}`, {
             dates: alldates,
           });
           return res.data;
         })
       );
       setOpen(false);
-      navigate("https://crew-jhsb.onrender.com/");
+      navigate("/");
     } catch (err) {}
   };
   return (
