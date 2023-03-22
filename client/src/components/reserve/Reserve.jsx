@@ -64,7 +64,7 @@ const Reserve = ({ setOpen, hotelId }) => {
         })
       );
       setOpen(false);
-      navigate("/");
+      navigate("https://crew-jhsb.onrender.com/");
     } catch (err) {}
   };
   return (
