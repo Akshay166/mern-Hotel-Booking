@@ -25,7 +25,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading, error } = useFetch(`/hotels/find/${id}`);
+  const { data, loading, error } = useFetch(`https://crew-jhsb.onrender.com/hotels/find/${id}`);
   //console.log(data);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -63,7 +63,7 @@ const Hotel = () => {
     if (user) {
       setOpenModal(true);
     } else {
-      navigate("/login");
+      navigate("https://crew-jhsb.onrender.com/login");
     }
   };
 
