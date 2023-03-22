@@ -17,7 +17,7 @@ import {
 
 
    
-  } from "../con trollers/hotel.js";
+  } from "../controllers/hotel.js";
 
   router.get("/", getHotels);
 router.post("/",createHotel);
