@@ -10,7 +10,7 @@ import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 // import roomsRoute from "./routes/rooms.js";
 dotenv.config();
-const cors=require("cors");
+import cors from "cors";
 const cnct =async ()=> {
 
     try{
