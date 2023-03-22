@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "https://crew-jhsb.onrender.com/hotels/countByCity?cities=Mahbubnagar,Mahbubnagar2,bnglr"
+    "/hotels/countByCity?cities=Mahbubnagar,Mahbubnagar2,bnglr"
   );
 console.log(data);
   return (
