@@ -25,9 +25,11 @@ const cnct =async ()=> {
 
 app.use(express.json())
 app.use(cookieParser())
-
+app.use(cors());
 app.get("/",(req,res)=>{
+  res.setHeader("Access-Control-Allow-Credentials","true");
   res.json("server start");
+   
 });
 
  app.use("/api/auth", authRoute);
